@@ -1,6 +1,5 @@
 import string
 import time
-import argparse
 from letterboxedutils import *
 from bitarray import bitarray, frozenbitarray
 
@@ -58,7 +57,6 @@ def get_options(d, solution):
 
     return r
 
-
 def solver(solution, depth, chars, validwords, words, maxdepth):
     if solution.bitarray.all():
         return solution
@@ -87,12 +85,6 @@ def solver(solution, depth, chars, validwords, words, maxdepth):
                 return result
 
     return None
-
-def timePortion(t, total):
-    return str(round(t/total*100, 2)) + '%'
-
-def rndTime(t):
-    return str(round(t, 3)).ljust(5,'0')+'s'
 
 def main():
     print()
